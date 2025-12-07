@@ -277,7 +277,7 @@ class _SettingsScreenState extends State<SettingsScreen> with BackgroundMusicMix
               
               const SizedBox(height: 16),
               
-              // Bouton supprimer mes données
+              // Bouton gérer mon compte
               NotebookButton(
                 onPressed: () async {
                   final confirm = await showDialog<bool>(
@@ -304,7 +304,7 @@ class _SettingsScreenState extends State<SettingsScreen> with BackgroundMusicMix
                                 shape: BoxShape.circle,
                               ),
                               child: Icon(
-                                Icons.delete_outline,
+                                Icons.settings,
                                 size: 32,
                                 color: Colors.orange,
                               ),
@@ -397,7 +397,7 @@ class _SettingsScreenState extends State<SettingsScreen> with BackgroundMusicMix
                   }
                 },
                 text: AppLocalizations.of(context)!.deleteMyData,
-                icon: Icons.delete_outline,
+                icon: Icons.settings,
                 backgroundColor: Colors.orange,
                 textColor: Colors.white,
               ).animate().fadeIn(delay: 700.ms),
