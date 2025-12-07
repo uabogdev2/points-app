@@ -253,7 +253,28 @@ flutter build ios --release
 
 ## 📱 Captures d'Écran
 
-> *Ajoutez vos captures d'écran ici*
+<div align="center">
+
+### Écran d'accueil et sélection de mode de jeu
+
+<img src="screenshot/Screenshot_20251206_015908.png" alt="Écran d'accueil" width="300"/>
+<img src="screenshot/Screenshot_20251206_015929.png" alt="Sélection de mode" width="300"/>
+
+### Interface de jeu
+
+<img src="screenshot/Screenshot_20251206_015945.png" alt="Interface de jeu" width="300"/>
+<img src="screenshot/Screenshot_20251206_015955.png" alt="Partie en cours" width="300"/>
+
+### Statistiques et classement
+
+<img src="screenshot/Screenshot_20251206_020130.png" alt="Statistiques" width="300"/>
+<img src="screenshot/Screenshot_20251206_020159.png" alt="Classement" width="300"/>
+
+### Paramètres
+
+<img src="screenshot/Screenshot_20251206_020228.png" alt="Paramètres" width="300"/>
+
+</div>
 
 ---
 
@@ -284,7 +305,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ## 👥 Auteurs
 
-- **Votre Nom** - *Développement initial* - [VotreGitHub](https://github.com/votre-username)
+- **Ulrich Abognon** - *Développement initial* - [uabogdev2](https://github.com/uabogdev2)
 
 ---
 
@@ -300,7 +321,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 Pour toute question ou problème :
 
-- 📧 Email : support@points-master.com
+- 📧 Email : Support@ivoirelabs.com
 - 🐛 Issues : [GitHub Issues](https://github.com/uabogdev2/points-app/issues)
 - 💬 Discussions : [GitHub Discussions](https://github.com/uabogdev2/points-app/discussions)
 
