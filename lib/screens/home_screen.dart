@@ -20,6 +20,7 @@ import '../widgets/notebook_bottom_nav.dart';
 import '../widgets/sound_button.dart';
 import '../services/notification_service.dart';
 import '../services/storage_service.dart';
+import '../services/audio_controller.dart';
 import 'game_screen.dart';
 import 'game_mode_selection_screen.dart';
 import 'statistics_screen.dart';
@@ -421,8 +422,10 @@ class _HomeTabState extends State<_HomeTab> {
     showDialog(
       context: context,
       barrierDismissible: !force,
-      builder: (dialogContext) => WillPopScope(
-        onWillPop: () async {
+      builder: (dialogContext) => PopScope(
+        canPop: !force,
+        onPopInvoked: (didPop) {
+          if (didPop) return;
           // Empêcher la fermeture avec le bouton retour si force = true
           if (force) {
             // Afficher un message si l'utilisateur essaie de fermer
@@ -433,9 +436,7 @@ class _HomeTabState extends State<_HomeTab> {
                 backgroundColor: Colors.orange,
               ),
             );
-            return false; // Empêcher la fermeture
           }
-          return true; // Permettre la fermeture
         },
         child: AlertDialog(
           title: Text(force ? AppLocalizations.of(context)!.updateRequired : AppLocalizations.of(context)!.updateAvailable),
@@ -710,7 +711,9 @@ class _HomeTabState extends State<_HomeTab> {
                   : null,
               child: user?.avatarUrl == null
                   ? Text(
-                      user?.name[0].toUpperCase() ?? 'U',
+                      (user?.name != null && user!.name.isNotEmpty) 
+                          ? user.name[0].toUpperCase() 
+                          : 'U',
                       style: AppTheme.handwritingTitle.copyWith(fontSize: 28),
                     )
                   : null,
