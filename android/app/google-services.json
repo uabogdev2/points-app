@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "727903058572",
+    "project_id": "points-points",
+    "storage_bucket": "points-points.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727903058572:android:b1fd8632527f7c7f07d9a9",
+        "android_client_info": {
+          "package_name": "com.pegadev.points_points"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFjjcnvSCRFcFGxmSoEArVHMGSNsavAO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

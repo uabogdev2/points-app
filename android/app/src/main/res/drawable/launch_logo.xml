@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Logo avec taille fixe de 140dp (comme dans le splash screen) -->
+    <item
+        android:width="140dp"
+        android:height="140dp"
+        android:gravity="center">
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/launch_image" />
+    </item>
+</layer-list>
+

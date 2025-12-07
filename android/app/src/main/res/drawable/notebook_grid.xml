@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fond blanc cassé -->
+    <item>
+        <color android:color="#FFFDF7" />
+    </item>
+    
+    <!-- Lignes horizontales pour simuler le quadrillage (spacing 24dp) -->
+    <!-- Note: Pour un pattern complet, il faudrait une image bitmap -->
+    <!-- Ici on crée quelques lignes représentatives -->
+    <item android:top="24dp">
+        <shape android:shape="line">
+            <stroke
+                android:width="0.5dp"
+                android:color="#B8D4E8"
+                android:alpha="0.3" />
+        </shape>
+    </item>
+    <item android:top="48dp">
+        <shape android:shape="line">
+            <stroke
+                android:width="0.5dp"
+                android:color="#B8D4E8"
+                android:alpha="0.3" />
+        </shape>
+    </item>
+    <item android:top="72dp">
+        <shape android:shape="line">
+            <stroke
+                android:width="0.5dp"
+                android:color="#B8D4E8"
+                android:alpha="0.3" />
+        </shape>
+    </item>
+    <item android:top="96dp">
+        <shape android:shape="line">
+            <stroke
+                android:width="0.5dp"
+                android:color="#B8D4E8"
+                android:alpha="0.3" />
+        </shape>
+    </item>
+</layer-list>
+

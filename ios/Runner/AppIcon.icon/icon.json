@@ -1,0 +1,57 @@
+{
+  "color-space-for-untagged-svg-colors" : "display-p3",
+  "fill-specializations" : [
+    {
+      "value" : "automatic"
+    },
+    {
+      "appearance" : "dark",
+      "value" : {
+        "solid" : "srgb:0.22724,0.51228,1.00000,1.00000"
+      }
+    }
+  ],
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "blend-mode-specializations" : [
+            {
+              "value" : "darken"
+            },
+            {
+              "appearance" : "dark",
+              "value" : "overlay"
+            }
+          ],
+          "fill" : "automatic",
+          "glass" : true,
+          "hidden" : false,
+          "image-name" : "logo asset texte.png",
+          "name" : "logo asset texte",
+          "position" : {
+            "scale" : 0.9,
+            "translation-in-points" : [
+              -0.3690185546875,
+              -70.04229736328125
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}

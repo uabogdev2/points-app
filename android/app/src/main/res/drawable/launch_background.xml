@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modify this file to customize your launch splash screen -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fond quadrillé style cahier -->
+    <item android:drawable="@drawable/notebook_grid" />
+
+    <!-- Marge rouge à gauche (48dp) -->
+    <item
+        android:width="1.5dp"
+        android:gravity="left|start"
+        android:left="48dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#E57373" android:alpha="0.3" />
+        </shape>
+    </item>
+
+    <!-- Logo centré avec taille réduite (28% de la taille originale = ~40dp) -->
+    <item android:drawable="@drawable/launch_logo_scaled" />
+</layer-list>

@@ -1,0 +1,82 @@
+==========================================
+APPLE APP STORE - INFORMATIONS DE PUBLICATION
+==========================================
+
+APPLICATION: Points Master
+VERSION: 1.0.0
+
+==========================================
+1. DÉTAILS DE TEST (TEST INFORMATION)
+==========================================
+
+Éléments à tester:
+
+- Authentification avec Google et Apple
+- Mode Solo: Partie contre l'IA, mouvements, complétion de carrés, score
+- Mode Duo: Partie à deux sur même écran, alternance des joueurs
+- Mode Quick Match: Recherche d'adversaire, partie en temps réel, synchronisation
+- Mode Private Game: Création de partie, QR code, invitations, partie complète
+- Notifications: Invitations, tours de jeu, fin de partie, son personnalisé
+- Statistiques: Affichage des stats, classement global, taux de victoire
+- Paramètres: Musique, sons, volume, notifications, profil
+- Audio: Musique de fond, sons de jeu, fonctionnement en arrière-plan
+- Navigation: Tous les écrans, orientations, tailles d'écran
+- Gestion des erreurs: Perte de connexion, reconnexion, timeouts
+- Performance: Fluidité, réactivité, consommation mémoire
+
+==========================================
+2. DESCRIPTION COURTE (SUBTITLE)
+==========================================
+
+Master the art of dots
+
+==========================================
+3. DESCRIPTION COMPLÈTE (DESCRIPTION)
+==========================================
+
+Points Master - The Ultimate Strategy Game
+
+Master the classic game of Dots and Squares in this modern, competitive mobile experience. Challenge yourself, your friends, or players worldwide in this strategic puzzle game that's easy to learn but hard to master.
+
+HOW TO PLAY
+Connect two adjacent points to create a segment. Complete the four sides of a square to score a point. The player with the most points at the end wins. Strategy is key - plan your moves carefully to block opponents and maximize your scoring opportunities.
+
+GAME MODES
+
+SOLO MODE
+Practice against artificial intelligence with adjustable difficulty levels. Perfect for training and improving your skills offline.
+
+DUO MODE
+Play with a friend on the same device. Take turns on one screen - ideal for face-to-face competition.
+
+QUICK MATCH
+Find an opponent online instantly and compete in real-time matches. Every victory counts towards your global ranking.
+
+PRIVATE GAMES
+Create a private room and invite friends via QR code or direct invitation. Challenge specific players and play at your own pace.
+
+KEY FEATURES
+
+REAL-TIME MULTIPLAYER
+Experience seamless online gameplay with instant synchronization. Play with players around the world in competitive ranked matches.
+
+GLOBAL LEADERBOARD
+Climb the ranks and compete for the top position. Track your progress and see how you compare to the best players.
+
+DETAILED STATISTICS
+Monitor your performance with comprehensive statistics. Track your win rate, best scores, completed squares, and winning streaks.
+
+PUSH NOTIFICATIONS
+Never miss a turn. Receive instant notifications when it's your move, when you receive invitations, or when a game ends.
+
+CUSTOMIZABLE EXPERIENCE
+Personalize your gameplay with adjustable music and sound effects. Control audio settings to match your preferences.
+
+SMOOTH GAMEPLAY
+Enjoy fluid animations and responsive controls designed for an optimal mobile gaming experience.
+
+SOCIAL FEATURES
+Build your gaming profile, customize your avatar, and challenge friends. Stay connected with your gaming community.
+
+Perfect for strategy game enthusiasts, competitive players, and anyone who loves puzzle games. Download Points Master now and prove you're the ultimate master of strategy!
+
