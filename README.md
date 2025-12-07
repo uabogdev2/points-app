@@ -112,8 +112,8 @@ Avant de commencer, assurez-vous d'avoir installé :
 ### 1. Cloner le repository
 
 ```bash
-git clone https://github.com/votre-username/points-master.git
-cd points-master/Mobile\ Flutter\ Points-Master
+git clone https://github.com/uabogdev2/points-app.git
+cd points-app
 ```
 
 ### 2. Installer les dépendances
@@ -301,8 +301,8 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 Pour toute question ou problème :
 
 - 📧 Email : support@points-master.com
-- 🐛 Issues : [GitHub Issues](https://github.com/votre-username/points-master/issues)
-- 💬 Discussions : [GitHub Discussions](https://github.com/votre-username/points-master/discussions)
+- 🐛 Issues : [GitHub Issues](https://github.com/uabogdev2/points-app/issues)
+- 💬 Discussions : [GitHub Discussions](https://github.com/uabogdev2/points-app/discussions)
 
 ---
 
