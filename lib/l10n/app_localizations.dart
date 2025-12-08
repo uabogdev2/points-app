@@ -1271,7 +1271,7 @@ abstract class AppLocalizations {
   /// No description provided for @deleteMyData.
   ///
   /// In fr, this message translates to:
-  /// **'Supprimer mes données'**
+  /// **'Gérer mon compte'**
   String get deleteMyData;
 
   /// No description provided for @deleteMyDataMessage.

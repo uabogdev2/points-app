@@ -636,7 +636,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get save => 'Sauvegarder';
 
   @override
-  String get deleteMyData => 'Supprimer mes données';
+  String get deleteMyData => 'Gérer mon compte';
 
   @override
   String get deleteMyDataMessage =>

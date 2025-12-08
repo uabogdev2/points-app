@@ -630,7 +630,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get deleteMyData => 'Delete my data';
+  String get deleteMyData => 'Manage my account';
 
   @override
   String get deleteMyDataMessage => 'You will continue on an external browser';

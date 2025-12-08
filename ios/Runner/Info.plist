@@ -255,5 +255,10 @@
 	<array>
 		<string>remote-notification</string>
 	</array>
+	<!-- Encryption Export Compliance -->
+	<!-- L'app utilise uniquement le chiffrement standard fourni par iOS (HTTPS/TLS, Keychain) -->
+	<!-- Pas d'algorithmes de chiffrement propriétaires ou non standard -->
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 </dict>
 </plist>
