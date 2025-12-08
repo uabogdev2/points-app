@@ -28,6 +28,7 @@ import 'leaderboard_screen.dart';
 import 'waiting_for_opponent_screen.dart';
 import 'help_screen.dart';
 import 'settings_screen.dart';
+import 'remove_ads_screen.dart';
 import '../mixins/background_music_mixin.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -662,6 +663,13 @@ class _HomeTabState extends State<_HomeTab> {
                 ),
               ],
             ),
+            
+            const SizedBox(height: 12),
+            
+            // Bouton Remove Ads
+            _buildRemoveAdsButton(context, user)
+                .animate()
+                .fadeIn(delay: 1000.ms),
             
             const SizedBox(height: 32),
           ],

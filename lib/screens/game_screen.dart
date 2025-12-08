@@ -4,6 +4,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:Points_Points/l10n/app_localizations.dart';
 import '../providers/game_provider.dart';
+import '../providers/auth_provider.dart';
 import '../theme/app_theme.dart';
 import '../widgets/game_board.dart';
 import '../widgets/notebook_widgets.dart';
@@ -848,7 +849,9 @@ class _GameFinishedScreenState extends State<_GameFinishedScreen> {
       // Afficher une publicité interstitielle après 2-3 parties
       // ⚠️ IMPORTANT: Uniquement sur l'écran de fin de partie (game.status == 'finished')
       if (widget.game.status == 'finished') {
-        AdMobService.onGameFinished();
+        final authProvider = Provider.of<AuthProvider>(context, listen: false);
+        final adsRemoved = authProvider.user?.adsRemoved ?? false;
+        AdMobService.onGameFinished(adsRemoved: adsRemoved);
       } else {
         debugPrint('⚠️ [GAME] Tentative d\'afficher une pub alors que la partie n\'est pas terminée (status: ${widget.game.status})');
       }

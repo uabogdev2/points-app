@@ -10,6 +10,8 @@ class User {
   final String? country;
   final DateTime? lastActiveAt;
   final Statistic? statistic;
+  final bool adsRemoved;
+  final DateTime? adsRemovedAt;
 
   User({
     required this.id,
@@ -23,6 +25,8 @@ class User {
     this.country,
     this.lastActiveAt,
     this.statistic,
+    this.adsRemoved = false,
+    this.adsRemovedAt,
   });
 
   factory User.fromJson(Map<String, dynamic> json) {
@@ -42,6 +46,10 @@ class User {
       statistic: json['statistic'] != null
           ? Statistic.fromJson(json['statistic'] as Map<String, dynamic>)
           : null,
+      adsRemoved: json['ads_removed'] as bool? ?? false,
+      adsRemovedAt: json['ads_removed_at'] != null
+          ? DateTime.parse(json['ads_removed_at'] as String)
+          : null,
     );
   }
 
@@ -58,6 +66,8 @@ class User {
       'country': country,
       'last_active_at': lastActiveAt?.toIso8601String(),
       'statistic': statistic?.toJson(),
+      'ads_removed': adsRemoved,
+      'ads_removed_at': adsRemovedAt?.toIso8601String(),
     };
   }
 }

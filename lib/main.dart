@@ -19,6 +19,7 @@ import 'providers/duo_game_provider.dart';
 import 'providers/audio_settings_provider.dart';
 import 'providers/notification_settings_provider.dart';
 import 'providers/locale_provider.dart';
+import 'providers/purchase_provider.dart';
 import 'services/device_service.dart';
 import 'services/audio_controller.dart';
 import 'services/admob_service.dart';
@@ -177,6 +178,7 @@ class _PointsMasterAppState extends State<PointsMasterApp> with WidgetsBindingOb
         ChangeNotifierProvider(create: (_) => DuoGameProvider()),
         ChangeNotifierProvider(create: (_) => AudioSettingsProvider()),
         ChangeNotifierProvider(create: (_) => NotificationSettingsProvider()),
+        ChangeNotifierProvider(create: (_) => PurchaseProvider()),
       ],
       child: Consumer<LocaleProvider>(
         builder: (context, localeProvider, _) {

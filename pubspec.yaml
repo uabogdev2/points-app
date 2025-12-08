@@ -85,6 +85,9 @@ dependencies:
   # AdMob
   google_mobile_ads: ^5.1.0
   
+  # In-App Purchase
+  in_app_purchase: ^3.1.11
+  
   # WebView
   webview_flutter: ^4.9.0
 

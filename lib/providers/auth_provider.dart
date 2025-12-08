@@ -238,5 +238,16 @@ class AuthProvider with ChangeNotifier {
     _user = user;
     notifyListeners();
   }
+
+  // Rafraîchir l'utilisateur depuis le serveur
+  Future<void> refreshUser() async {
+    try {
+      final user = await ApiService.getMe();
+      _user = user;
+      notifyListeners();
+    } catch (e) {
+      debugPrint('❌ Erreur lors du rafraîchissement de l\'utilisateur: $e');
+    }
+  }
 }
 

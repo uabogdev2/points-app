@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../providers/solo_game_provider.dart';
+import '../providers/auth_provider.dart';
 import '../theme/app_theme.dart';
 import '../widgets/game_board.dart';
 import '../widgets/notebook_widgets.dart';
@@ -331,7 +332,9 @@ class _SoloGameScreenState extends State<SoloGameScreen> {
       // Afficher une publicité interstitielle après 2-3 parties
       // ⚠️ IMPORTANT: Uniquement sur l'écran de fin de partie (game.status == 'finished')
       if (game.status == 'finished') {
-        AdMobService.onGameFinished();
+        final authProvider = Provider.of<AuthProvider>(context, listen: false);
+        final adsRemoved = authProvider.user?.adsRemoved ?? false;
+        AdMobService.onGameFinished(adsRemoved: adsRemoved);
       } else {
         debugPrint('⚠️ [SOLO] Tentative d\'afficher une pub alors que la partie n\'est pas terminée (status: ${game.status})');
       }

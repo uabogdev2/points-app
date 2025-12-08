@@ -768,5 +768,95 @@ class ApiService {
       return null;
     }
   }
+
+  // Purchases
+  static Future<Map<String, dynamic>> verifyPurchase({
+    required String productId,
+    required String transactionId,
+    required String platform,
+    String? purchaseToken, // Pour Google Play
+    String? receiptData, // Pour App Store
+  }) async {
+    try {
+      final url = '${ApiConfig.baseUrl}/purchases/verify';
+      debugPrint('💳 [API] POST $url - Product: $productId, Platform: $platform');
+      
+      final requestBody = {
+        'product_id': productId,
+        'transaction_id': transactionId,
+        'platform': platform,
+        if (purchaseToken != null) 'purchase_token': purchaseToken,
+        if (receiptData != null) 'receipt_data': receiptData,
+      };
+      
+      final response = await http.post(
+        Uri.parse(url),
+        headers: await _getHeaders(),
+        body: jsonEncode(requestBody),
+      );
+
+      debugPrint('💳 [API] Réponse status: ${response.statusCode}');
+
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body) as Map<String, dynamic>;
+        return data;
+      } else {
+        final errorData = jsonDecode(response.body) as Map<String, dynamic>;
+        throw Exception(errorData['error'] as String? ?? 'Erreur de vérification d\'achat');
+      }
+    } catch (e) {
+      debugPrint('❌ [API] Exception verifyPurchase: $e');
+      rethrow;
+    }
+  }
+
+  static Future<Map<String, dynamic>> getPurchaseStatus() async {
+    try {
+      final url = '${ApiConfig.baseUrl}/purchases/status';
+      debugPrint('💳 [API] GET $url');
+      
+      final response = await http.get(
+        Uri.parse(url),
+        headers: await _getHeaders(),
+      );
+
+      debugPrint('💳 [API] Réponse status: ${response.statusCode}');
+
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body) as Map<String, dynamic>;
+        return data;
+      } else {
+        throw Exception('Échec de récupération du statut d\'achat: ${response.statusCode}');
+      }
+    } catch (e) {
+      debugPrint('❌ [API] Exception getPurchaseStatus: $e');
+      rethrow;
+    }
+  }
+
+  static Future<Map<String, dynamic>> restorePurchases() async {
+    try {
+      final url = '${ApiConfig.baseUrl}/purchases/restore';
+      debugPrint('💳 [API] POST $url');
+      
+      final response = await http.post(
+        Uri.parse(url),
+        headers: await _getHeaders(),
+      );
+
+      debugPrint('💳 [API] Réponse status: ${response.statusCode}');
+
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body) as Map<String, dynamic>;
+        return data;
+      } else {
+        final errorData = jsonDecode(response.body) as Map<String, dynamic>;
+        throw Exception(errorData['error'] as String? ?? 'Erreur de restauration des achats');
+      }
+    } catch (e) {
+      debugPrint('❌ [API] Exception restorePurchases: $e');
+      rethrow;
+    }
+  }
 }
 

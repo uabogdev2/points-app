@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../providers/duo_game_provider.dart';
+import '../providers/auth_provider.dart';
 import '../theme/app_theme.dart';
 import '../widgets/game_board.dart';
 import '../widgets/notebook_widgets.dart';
@@ -351,7 +352,9 @@ class _DuoGameScreenState extends State<DuoGameScreen> {
     // ⚠️ IMPORTANT: Uniquement sur l'écran de fin de partie (game.status == 'finished')
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (game.status == 'finished') {
-        AdMobService.onGameFinished();
+        final authProvider = Provider.of<AuthProvider>(context, listen: false);
+        final adsRemoved = authProvider.user?.adsRemoved ?? false;
+        AdMobService.onGameFinished(adsRemoved: adsRemoved);
       } else {
         debugPrint('⚠️ [DUO] Tentative d\'afficher une pub alors que la partie n\'est pas terminée (status: ${game.status})');
       }

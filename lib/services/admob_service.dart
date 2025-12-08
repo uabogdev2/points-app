@@ -155,10 +155,27 @@ class AdMobService {
     return null;
   }
 
+  /// Vérifie si les publicités doivent être affichées
+  /// Retourne false si l'utilisateur a acheté "Remove Ads"
+  static bool shouldShowAds({bool adsRemoved = false}) {
+    if (adsRemoved) {
+      debugPrint('✅ [ADMOB] Publicités désactivées (Remove Ads acheté)');
+      return false;
+    }
+    return true;
+  }
+
   /// Incrémente le compteur de parties et affiche une pub si nécessaire
   /// ⚠️ IMPORTANT: Cette méthode doit être appelée UNIQUEMENT sur l'écran de fin de partie
   /// Ne jamais appeler pendant une partie active (status: 'active' ou 'waiting')
-  static void onGameFinished() {
+  /// @param adsRemoved: true si l'utilisateur a acheté "Remove Ads"
+  static void onGameFinished({bool adsRemoved = false}) {
+    // Ne pas afficher de pub si l'utilisateur a acheté Remove Ads
+    if (!shouldShowAds(adsRemoved: adsRemoved)) {
+      debugPrint('✅ [ADMOB] Pas de pub (Remove Ads actif)');
+      return;
+    }
+
     _gamesPlayed++;
     debugPrint('🎮 [ADMOB] Parties jouées: $_gamesPlayed');
 
