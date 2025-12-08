@@ -231,3 +231,6 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
+# Backend server (exclu du dépôt)
+backend-server/
+
